@@ -3,8 +3,8 @@
   "short_name": "کانی‌سپی",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#f4f7f5",
-  "theme_color": "#146b45",
+  "background_color": "#080808",
+  "theme_color": "#080808",
   "lang": "fa",
   "dir": "rtl",
   "icons": [

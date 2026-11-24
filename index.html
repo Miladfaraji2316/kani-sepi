@@ -3,31 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#146b45">
+<meta name="theme-color" content="#080808">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="کانی‌سپی">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-192.png">
 <title>کارواش کانی‌سپی</title>
 <style>
-:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,sans-serif;color:#17231c;background:#f4f7f5}
-*{box-sizing:border-box}body{margin:0;padding:18px;max-width:650px;margin-inline:auto}
-header,.panel{background:white;border:1px solid #dce6df;border-radius:16px;padding:16px;margin-bottom:14px}
-header{background:#146b45;color:white}h1{font-size:22px;margin:0 0 5px}p{margin:5px 0;color:inherit}
-label{display:block;font-weight:650;font-size:14px;margin:12px 0 6px}
-input,select{width:100%;padding:13px;border:1px solid #cbd8cf;border-radius:10px;font-size:16px;background:white}
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,sans-serif;color:#f7f1df;background:#080808;--gold:#e4b84f;--gold2:#ffd978;--panel:#151515;--line:#57451f;--muted:#c2b99f}
+*{box-sizing:border-box}body{margin:0;padding:18px;max-width:650px;margin-inline:auto;background:radial-gradient(ellipse at 50% -15%,#3b2b0b 0%,#111 38%,#080808 72%);min-height:100vh}
+header,.panel{background:linear-gradient(145deg,#1b1b1b,#0e0e0e);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:14px;box-shadow:0 8px 24px #0008,inset 0 1px #ffffff0b}
+header{background:linear-gradient(135deg,#211a0a,#090909 70%);border:1px solid var(--gold);color:var(--gold2);text-align:center;padding:22px 16px;position:relative;overflow:hidden}
+header:after{content:"";position:absolute;inset:auto -15% -48px;height:75px;border-radius:50%;border-top:1px solid #d7a93666;box-shadow:0 -8px 30px #d7a93612;pointer-events:none}
+h1{font-size:23px;margin:0 0 7px;font-weight:850}header p{margin:5px 0;color:#e9d59e}
+label{display:block;font-weight:700;font-size:14px;margin:12px 0 6px;color:var(--gold2)}
+input,select{width:100%;padding:13px;border:1px solid #5a4a2b;border-radius:11px;font-size:16px;background:#202020;color:#fff8e8;min-width:0;outline:none}input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px #e4b84f22}
 .service{display:grid;grid-template-columns:1fr 110px 42px;gap:8px;align-items:end;margin:10px 0}
-.service button{height:46px;border:1px solid #d4ded7;background:#fff;border-radius:10px;font-size:18px}
-button,.send{display:block;width:100%;padding:14px;border:0;border-radius:11px;font-size:16px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer}
-.add{background:#e9f2ec;color:#145b3c;margin-top:10px}.green{background:#16834a;color:white}.muted{color:#617168;font-size:13px}
-.total{display:flex;justify-content:space-between;padding:8px 0;gap:12px}.grand{font-size:20px;font-weight:800;border-top:1px solid #dce6df;padding-top:14px}
-#preview{white-space:pre-wrap;line-height:1.8;background:#f6f8f6;padding:12px;border-radius:10px;font-size:14px}
-@media(max-width:390px){.service{grid-template-columns:1fr 100px 38px;gap:5px}}
+.service button{height:46px;border:1px solid #6a5425;background:#211d13;color:var(--gold2);border-radius:10px;font-size:22px}
+button,.send{display:block;width:100%;padding:14px;border:0;border-radius:11px;font-size:16px;font-weight:800;text-align:center;text-decoration:none;cursor:pointer;transition:transform .12s,filter .12s}button:active,.send:active{transform:scale(.99);filter:brightness(1.1)}
+.add{background:#282113;color:var(--gold2);border:1px solid #8b6a28;margin-top:10px}.green{background:linear-gradient(135deg,#ffe18a,#d49b27 55%,#a97817);color:#171106;border:1px solid #ffe6a4;box-shadow:0 5px 18px #b7832433}
+.muted{color:var(--muted);font-size:13px;line-height:1.8}.total{display:flex;justify-content:space-between;padding:9px 0;gap:12px;color:#eee4cd}.total strong{color:var(--gold2)}.grand{font-size:20px;font-weight:850;border-top:1px solid var(--line);padding-top:14px;color:var(--gold2)}
+#preview{white-space:pre-wrap;line-height:1.9;background:#0b0b0b;border:1px solid #4a3a1b;color:#f7edda;padding:12px;border-radius:10px;font-size:14px}
+.panel>div[style*="font-weight"]{color:var(--gold2)}
+@media(max-width:390px){body{padding:12px}.service{grid-template-columns:1fr 96px 38px;gap:5px}h1{font-size:21px}}
 </style>
 </head>
 <body>
-<header><h1>🚘 کارواش کانی‌سپی</h1><p>ثبت خدمات و آماده‌سازی پیامک مشتری</p></header>
+<header><h1>✦ کارواش کانی‌سپی ✦</h1><p>ثبت خدمات و آماده‌سازی پیامک مشتری</p></header>
 <section class="panel">
 <label for="phone">شماره موبایل مشتری</label>
 <input id="phone" type="tel" inputmode="tel" placeholder="09123456789" autocomplete="tel">
